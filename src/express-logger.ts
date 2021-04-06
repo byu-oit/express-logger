@@ -2,15 +2,16 @@ import { Logger } from 'pino'
 import PinoHttp = require('pino-http')
 import { HttpLogger } from 'pino-http'
 import { v4 as randomUuid } from 'uuid'
+import DefaultLogger from '@byu-oit/logger'
 
 export interface MiddlewareOptions {
-  logger: Logger,
+  logger?: Logger,
   level?: string
 }
 
-export function LoggerMiddleware (input: MiddlewareOptions): HttpLogger {
+export function LoggerMiddleware (input?: MiddlewareOptions): HttpLogger {
   return PinoHttp({
-    logger: input.logger,
+    logger: input?.logger ?? DefaultLogger(),
     genReqId: req => {
       return req.headers['x-amzn-trace-id'] ?? createId() // use the amazon trace id as the request id
     }
