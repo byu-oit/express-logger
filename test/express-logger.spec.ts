@@ -21,9 +21,9 @@ function captureStdoutLogs () {
   }
 }
 
-function setupExpressApp () {
+function setupExpressApp (): void {
   app = express()
-  let logger = DefaultLogger()
+  const logger = DefaultLogger()
   app.use(LoggerMiddleware({
     logger: logger
   }))
@@ -47,7 +47,6 @@ afterEach(() => {
 })
 
 describe('express-logger middleware', () => {
-
   describe('In production env', () => {
     beforeEach(() => {
       process.env.NODE_ENV = 'production'
@@ -109,7 +108,7 @@ describe('express-logger middleware', () => {
 
     // TODO maybe this test should live in the @byu-oit/logger?
     test('GET to /foo with jwt headers should redact them', async () => {
-      let sensitiveJwt = 'sensitive jwt'
+      const sensitiveJwt = 'sensitive jwt'
       await mockRequest(app)
         .get('/foo')
         .set('X-Jwt-Assertion', sensitiveJwt)

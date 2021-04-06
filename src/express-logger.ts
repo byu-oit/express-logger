@@ -1,11 +1,11 @@
 import { Logger } from 'pino'
-import PinoHttp = require('pino-http')
 import { HttpLogger } from 'pino-http'
 import { v4 as randomUuid } from 'uuid'
 import DefaultLogger from '@byu-oit/logger'
+import PinoHttp = require('pino-http')
 
 export interface MiddlewareOptions {
-  logger?: Logger,
+  logger?: Logger
   level?: string
 }
 
