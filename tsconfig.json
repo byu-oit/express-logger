@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "extends": "@tsconfig/node10/tsconfig.json",
+  "include": [
+    "src/**/*"
+  ],
+  "compileOnSave": false
+}
