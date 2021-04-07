@@ -51,6 +51,17 @@ Any requests to the express server will then write logs that look like:
 }
 ```
 
+### Embedded Logger
+This middleware will attach the Pino logger to the request object, so if needed you can access the logger like:
+```typescript
+app.use(LoggerMiddleware())
+
+app.get('/foo', (req, res) => {
+  req.log.debug('Inside the /foo route')
+  res.send('hello world')
+})
+```
+
 ## Options
 
 Any [`pinoHttp` options](https://github.com/pinojs/pino-http#pinohttpopts-stream) can be overridden, but for compliance with our logging standards, we recommend sticking to the defaults provided in this package.

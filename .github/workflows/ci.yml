@@ -30,8 +30,12 @@ jobs:
         run: npm install
 
       - name: npm test
-        run: |
-          npm run coverage
+        if: ${{ matrix.node-version != env.node_version }} # just run the tests if not node 14
+        run: npm run test
+
+      - name: npm test with coverage
+        if: ${{ matrix.node-version == env.node_version }} # only upload coverage from node 14
+        run: npm run coverage
 
       - name: Upload coverage to Codecov
         if: ${{ matrix.node-version == env.node_version }} # only upload coverage from node 14
