@@ -1,5 +1,4 @@
 {
-  "extends": "@tsconfig/node10/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
@@ -16,6 +15,7 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true
   },
+  "extends": "@tsconfig/node10/tsconfig.json",
   "include": [
     "src/**/*"
   ],
