@@ -87,9 +87,13 @@ jobs:
       - id: version
         run: echo ::set-output name=version::$(node -p 'require("./package.json").version')
 
+      - name: debug
+        run: |
+          echo "version output: ${{ steps.version.outputs.version }}"
+
       - name: Draft release
         uses: release-drafter/release-drafter@v5
         with:
-          version: ${{ steps.version.output.version }}
+          version: ${{ steps.version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
