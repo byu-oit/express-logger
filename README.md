@@ -13,7 +13,6 @@ npm i @byu-oit/express-logger
 ## Usage
 ```typescript
 import { LoggerMiddleware } from '@byu-oit/express-logger'
-ad
 const app = Express()
 
 app.use(LoggerMiddleware())
