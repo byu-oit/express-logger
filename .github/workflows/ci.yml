@@ -75,3 +75,11 @@ jobs:
 
       - name: npm lint
         run: npm run lint
+
+  # https://github.com/marketplace/actions/release-drafter
+  draft_release:
+    runs-on: ubuntu-latest
+    needs: [test, audit, lint]
+    steps:
+      - name: Draft release
+        uses: release-drafter/release-drafter@v5
