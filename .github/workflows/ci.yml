@@ -78,6 +78,7 @@ jobs:
 
   # https://github.com/marketplace/actions/release-drafter
   draft_release:
+    name: Draft Release
     runs-on: ubuntu-latest
     needs: [test, audit, lint]
     steps:
