@@ -31,7 +31,7 @@ jobs:
           echo "Clean up existing dependencies"
           rm -rf node_modules
           rm package-lock.json
-          echo "Update dependencies
+          echo "Update dependencies"
           npm update
 
       - name: Bump patch version
