@@ -83,7 +83,13 @@ jobs:
     needs: [test, audit, lint]
     steps:
       - uses: actions/checkout@v2
+
+      - id: version
+        run: echo ::set-output name=version::$(node -p 'require("./package.json").version')
+
       - name: Draft release
         uses: release-drafter/release-drafter@v5
+        with:
+          version: steps.version.output.version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
