@@ -127,3 +127,5 @@ jobs:
         uses: release-drafter/release-drafter@v5
         with:
           pulish: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
