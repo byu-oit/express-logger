@@ -23,10 +23,10 @@ jobs:
 
       - name: Check outdated dependencies
         id: outdated
-        run: npm outdated || echo ::set-output name=outdated::true
+        run: npm outdated || echo ::set-output name=outdated::1
 
       - name: Bump dependencies
-        if: steps.outdated.outputs.outdated == true
+        if: steps.outdated.outputs.outdated == 1
         run: |
           echo "Clean up existing dependencies"
           rm -rf node_modules
@@ -35,11 +35,11 @@ jobs:
           npm update
 
       - name: Bump patch version
-        if: steps.outdated.outputs.outdated == true
+        if: steps.outdated.outputs.outdated == 1
         run: npm version patch -m "Upgrade to %s for weekly dependnecy bump"
 
       - name: Create (or update) pull request
-        if: steps.outdated.outputs.outdated == true
+        if: steps.outdated.outputs.outdated == 1
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GH_ACTIONS_TOKEN }} # Use non-default token so that this PR will trigger CI
