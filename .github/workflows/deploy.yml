@@ -125,9 +125,14 @@ jobs:
     needs: [publish]
     steps:
       - uses: actions/checkout@v2
+
+      - id: version
+        run: echo ::set-output name=version::$(node -p 'require("./package.json").version')
+
       - name: Publish Release
         uses: release-drafter/release-drafter@v5
         with:
           pulish: true
+          version: ${{ steps.version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
