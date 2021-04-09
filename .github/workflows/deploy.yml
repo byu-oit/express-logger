@@ -132,7 +132,7 @@ jobs:
       - name: Publish Release
         uses: release-drafter/release-drafter@v5
         with:
-          pulish: true
+          publish: true
           version: ${{ steps.version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
