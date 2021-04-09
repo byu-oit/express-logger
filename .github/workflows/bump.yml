@@ -30,7 +30,7 @@ jobs:
         run: |
           echo "Clean up existing dependencies"
           rm -rf node_modules
-          rm package-jock.json
+          rm package-lock.json
           echo "Update dependencies
           npm update
 
