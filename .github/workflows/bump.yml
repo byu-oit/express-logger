@@ -27,12 +27,7 @@ jobs:
 
       - name: Bump dependencies
         if: steps.outdated.outputs.outdated == 1
-        run: |
-          echo "Clean up existing dependencies"
-          rm -rf node_modules
-          rm package-lock.json
-          echo "Update dependencies"
-          npm update
+        run: npm update
 
       - name: Bump patch version
         if: steps.outdated.outputs.outdated == 1
