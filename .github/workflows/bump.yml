@@ -36,7 +36,7 @@ jobs:
 
       - name: Bump patch version
         if: steps.outdated.outputs.outdated == 1
-        run: npm version patch -m "Upgrade to %s for weekly dependnecy bump"
+        run: npm version patch -git-tag-version=false
 
       - name: Create (or update) pull request
         if: steps.outdated.outputs.outdated == 1
