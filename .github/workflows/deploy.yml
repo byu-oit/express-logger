@@ -3,6 +3,13 @@ name: Deployment
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
+      - .github/dependabot.yml
+      - .github/workflows/ci.yml
+      - .github/workflows/bump.yml
 
 env:
   node_version: "14.x"

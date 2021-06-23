@@ -2,7 +2,7 @@
 [![GitHub Release](https://img.shields.io/github/release/byu-oit/express-logger?style=flat)]()
 [![codecov](https://codecov.io/gh/byu-oit/express-logger/branch/main/graph/badge.svg?token=6kkkOs7yEe)](https://codecov.io/gh/byu-oit/express-logger)
 
-Default express logging middleware to match [BYU Application Development logging standards](https://github.com/byu-oit/app-dev-best-practices/blob/main/adr/application/0006-basic-logging-standards.md).
+Default express logging middleware to match [CES Application Development logging standards](https://github.com/byu-oit/ces-dev-best-practices/blob/main/adr/application/0006-basic-logging-standards.md).
 
 ## Install
 

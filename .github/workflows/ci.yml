@@ -3,11 +3,14 @@ name: CI
 on:
   pull_request:
     branches: [main]
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - edited
+    paths-ignore:
+      - .gitignore
+      - LICENSE
+      - README.md
+      - .github/dependabot.yml
+      - .github/workflows/deploy.yml
+      - .github/workflows/bump.yml
+
 env:
   node_version: "14.x"
 
