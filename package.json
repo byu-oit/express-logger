@@ -1,6 +1,6 @@
 {
   "name": "@byu-oit/express-logger",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Default express logging middleware to match BYU app dev logging standards",
   "main": "dist/express-logger.js",
   "types": "dist/express-logger.d.ts",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/byu-oit/express-logger#readme",
   "dependencies": {
-    "@byu-oit/logger": "^0.3.0",
+    "@byu-oit/logger": "^0.3.1",
     "pino-http": "^5.5.0",
     "uuid": "^8.3.2"
   },
@@ -40,8 +40,8 @@
     "@types/uuid": "^8.3.1",
     "express": "^4.17.1",
     "jest": "^27.0.6",
-    "lint-staged": "^11.0.0",
-    "pino-pretty": "^5.1.1",
+    "lint-staged": "^11.0.1",
+    "pino-pretty": "^5.1.2",
     "rimraf": "^3.0.2",
     "snazzy": "^9.0.0",
     "supertest": "^6.1.3",
