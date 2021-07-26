@@ -129,7 +129,7 @@ describe('express-logger middleware', () => {
     test('GET to /foo should use pretty printed format', async () => {
       await mockRequest(app).get('/foo')
 
-      expect(logged).not.toMatch(/{.*}/)
+      expect(logged).not.toMatch(/^{.*}$/gs)
     })
   })
 })
