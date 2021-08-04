@@ -8,6 +8,10 @@ export function LoggerMiddleware (options?: PinoHttp.Options): HttpLogger {
     genReqId: req => {
       return req.headers['x-amzn-trace-id'] ?? randomUuid() // use the amazon trace id as the request id
     },
+    customLogLevel: (res, err) => {
+      if (res.statusCode >= 400) return "error"
+      else return "info"
+    },
     ...options
   })
 }
