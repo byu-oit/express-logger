@@ -27,7 +27,7 @@
   "homepage": "https://github.com/byu-oit/express-logger#readme",
   "dependencies": {
     "@byu-oit/logger": "^0.3.12",
-    "pino-http": "^5.7.0",
+    "pino-http": "^6.2.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
