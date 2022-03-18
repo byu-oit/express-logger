@@ -41,7 +41,7 @@
     "express": "^4.17.1",
     "jest": "^27.2.0",
     "lint-staged": "^11.1.2",
-    "pino-pretty": "^6.0.0",
+    "pino-pretty": "^7.5.4",
     "rimraf": "^3.0.2",
     "snazzy": "^9.0.0",
     "supertest": "^6.1.6",
