@@ -25,7 +25,7 @@ app.use(LoggerMiddleware())
 <p>
 
 ```javascript
-const { default: LoggerMiddleware } = require('@byu-oit/express-logger')
+const { LoggerMiddleware } = require('@byu-oit/express-logger')
 
 const app = Express()
 
