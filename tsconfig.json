@@ -7,7 +7,7 @@
     "strictNullChecks": true,
     "moduleResolution": "node",
     "outDir": "dist",
-    "lib": ["es6"],
+    "lib": ["ESNext"],
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
