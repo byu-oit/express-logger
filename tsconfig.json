@@ -7,11 +7,11 @@
     "strictNullChecks": true,
     "moduleResolution": "node",
     "outDir": "dist",
-    "lib": ["esnext"],
+    "lib": ["es6"],
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "extends": "@tsconfig/node10/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json",
   "include": [
     "src/**/*"
   ],

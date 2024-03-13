@@ -12,7 +12,7 @@ on:
       - .github/workflows/bump.yml
 
 env:
-  node_version: "14.x"
+  node_version: "20.x"
 
 jobs:
   test:

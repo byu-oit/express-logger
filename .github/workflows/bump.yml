@@ -4,7 +4,7 @@ on:
     - cron: '0 14 * * 1'
   workflow_dispatch:
 env:
-  node_version: "14.x"
+  node_version: "20.x"
 
 jobs:
   Bump:
