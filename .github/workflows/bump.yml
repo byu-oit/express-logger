@@ -4,17 +4,17 @@ on:
     - cron: '0 14 * * 1'
   workflow_dispatch:
 env:
-  node_version: "14.x"
+  node_version: "20.x"
 
 jobs:
   Bump:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node_version }}
 

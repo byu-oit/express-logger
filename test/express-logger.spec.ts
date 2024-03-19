@@ -25,7 +25,7 @@ function setupExpressApp (): void {
   app = express()
   const logger = DefaultLogger()
   app.use(LoggerMiddleware({
-    logger: logger
+    logger
   }))
   app.get('/foo', (req: Request, res: Response) => res.send('foo'))
   app.post('/bar', (req: Request, res: Response) => {
