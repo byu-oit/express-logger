@@ -5,7 +5,7 @@
     "removeComments": false,
     "strict": true,
     "strictNullChecks": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "outDir": "dist",
     "lib": ["ESNext"],
     "esModuleInterop": true,
