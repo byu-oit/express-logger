@@ -1,19 +1,9 @@
 {
-  "compilerOptions": {
-    "sourceMap": true,
-    "declaration": true,
-    "removeComments": false,
-    "strict": true,
-    "strictNullChecks": true,
-    "moduleResolution": "nodenext",
-    "outDir": "dist",
-    "lib": ["ESNext"],
-    "esModuleInterop": true,
-    "resolveJsonModule": true
-  },
   "extends": "@tsconfig/node20/tsconfig.json",
-  "include": [
-    "src/**/*"
-  ],
-  "compileOnSave": false
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "esModuleInterop": true
+  },
+  "include": ["src"]
 }
