@@ -1,6 +1,6 @@
 {
   "name": "@byu-oit/express-logger",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "description": "Default express logging middleware to match BYU app dev logging standards",
   "main": "dist/express-logger.js",
   "types": "dist/express-logger.d.ts",
